@@ -1,6 +1,6 @@
 from add_contact import add_contact
 from change_contact import change_contact
-from phone import get_phone
+from get_phone import get_phone
 
 def parse_input(user_input):
     cmd, *args = user_input.split()

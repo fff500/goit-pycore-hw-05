@@ -1,13 +1,13 @@
 def input_error(func):
     def inner(*args, **kwargs):
         try:
-            if len(args[0]) > 1:
+            if len(args[0]) != 1:
                 raise ValueError
             return func(*args, **kwargs)
         except KeyError:
             return "Such a contact doesn't exist."
         except ValueError:
-            return "Give me only a name, please."
+            return "Give me a name, please."
 
     return inner
 
